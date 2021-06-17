@@ -1,0 +1,17 @@
+syntax = "proto3";
+package apis.v1;
+
+option go_package = "github.com/rhc07/chatservice-gRPC-golang/apis";
+
+message MessageRequest {
+	string body = 1;
+}
+
+message MessageResponse {
+	string body = 1;
+}
+
+service ChatService {
+	rpc SayHello(MessageRequest) returns (MessageResponse) {}
+}
+
